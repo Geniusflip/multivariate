@@ -6,7 +6,11 @@ module.exports = {
     module: {
       rules: [{
         exclude: '/src/main.js',
-      }],
+      },
+      {
+          test: /\.glsl$/,
+          use: 'webpack-glsl-loader'
+      }]
     },
     output: {
       filename: '../src/main.js'
